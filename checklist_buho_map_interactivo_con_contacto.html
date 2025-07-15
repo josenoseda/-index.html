@@ -1,0 +1,272 @@
+
+<style>
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+  }
+  .question-block {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 5px solid #2c3e50;
+  }
+  .question {
+    margin-bottom: 5px;
+  }
+  .button-group button {
+    margin-right: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  #score {
+    font-size: 22px;
+    margin-top: 30px;
+    padding: 15px;
+    background: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    display: none;
+  }
+</style>
+
+<div id="checklistForm">
+<div class="section-title">🧭 Información del proyecto</div>
+        <div class="question-block" data-points="0" id="q0">
+            <div class="question">¿Contás con un plano digitalizado y georreferenciado de tu desarrollo?</div>
+            <div class="button-group">
+                <button onclick="setScore(0, 1)">Sí</button>
+                <button onclick="setScore(0, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q1">
+            <div class="question">¿Tenés los datos técnicos (manzana, lote, superficie) centralizados en un solo lugar?</div>
+            <div class="button-group">
+                <button onclick="setScore(1, 1)">Sí</button>
+                <button onclick="setScore(1, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q2">
+            <div class="question">¿Podés acceder fácilmente al estado actualizado de cada unidad/lote?</div>
+            <div class="button-group">
+                <button onclick="setScore(2, 1)">Sí</button>
+                <button onclick="setScore(2, 0)">No</button>
+            </div>
+        </div>
+        <div class="section-title">🏗 Comercialización y ventas</div>
+        <div class="question-block" data-points="0" id="q3">
+            <div class="question">¿Tenés una herramienta que permita mostrar el loteo online en tiempo real?</div>
+            <div class="button-group">
+                <button onclick="setScore(3, 1)">Sí</button>
+                <button onclick="setScore(3, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q4">
+            <div class="question">¿Podés enviarle al cliente una hoja informativa digital personalizada?</div>
+            <div class="button-group">
+                <button onclick="setScore(4, 1)">Sí</button>
+                <button onclick="setScore(4, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q5">
+            <div class="question">¿Tenés un tour virtual para mostrar el proyecto a distancia sin perder calidad visual?</div>
+            <div class="button-group">
+                <button onclick="setScore(5, 1)">Sí</button>
+                <button onclick="setScore(5, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q6">
+            <div class="question">¿Tu equipo de ventas puede trabajar de forma colaborativa con la misma info centralizada?</div>
+            <div class="button-group">
+                <button onclick="setScore(6, 1)">Sí</button>
+                <button onclick="setScore(6, 0)">No</button>
+            </div>
+        </div>
+        <div class="section-title">📊 Gestión y toma de decisiones</div>
+        <div class="question-block" data-points="0" id="q7">
+            <div class="question">¿Tenés toda la información comercial y técnica del proyecto centralizada en una sola plataforma?</div>
+            <div class="button-group">
+                <button onclick="setScore(7, 1)">Sí</button>
+                <button onclick="setScore(7, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q8">
+            <div class="question">¿Podés evitar reuniones largas porque tu equipo ya ve la disponibilidad, documentación y datos en tiempo real?</div>
+            <div class="button-group">
+                <button onclick="setScore(8, 1)">Sí</button>
+                <button onclick="setScore(8, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q9">
+            <div class="question">¿Tu equipo comercial y de marketing trabaja con la misma base de datos actualizada?</div>
+            <div class="button-group">
+                <button onclick="setScore(9, 1)">Sí</button>
+                <button onclick="setScore(9, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q10">
+            <div class="question">¿Podés consultar rápidamente qué unidades están vendidas, reservadas o disponibles sin abrir múltiples archivos o pedir actualizaciones?</div>
+            <div class="button-group">
+                <button onclick="setScore(10, 1)">Sí</button>
+                <button onclick="setScore(10, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q11">
+            <div class="question">¿Contás con una herramienta que te permita visualizar el avance del proyecto de forma clara para presentaciones, decisiones internas o reuniones estratégicas?</div>
+            <div class="button-group">
+                <button onclick="setScore(11, 1)">Sí</button>
+                <button onclick="setScore(11, 0)">No</button>
+            </div>
+        </div>
+        <div class="section-title">💬 Marketing y comunicación</div>
+        <div class="question-block" data-points="0" id="q12">
+            <div class="question">¿Podés ver cuántos clics recibe cada unidad del proyecto o cuántas veces fue visualizado el Masterplan?</div>
+            <div class="button-group">
+                <button onclick="setScore(12, 1)">Sí</button>
+                <button onclick="setScore(12, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q13">
+            <div class="question">¿Tenés datos sobre qué sectores o lotes generan más interés y los usás para orientar tus campañas?</div>
+            <div class="button-group">
+                <button onclick="setScore(13, 1)">Sí</button>
+                <button onclick="setScore(13, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q14">
+            <div class="question">¿Contás con un link único, con toda la info visual, técnica y comercial del desarrollo para compartir por WhatsApp, Instagram, ferias o reuniones con inversores?</div>
+            <div class="button-group">
+                <button onclick="setScore(14, 1)">Sí</button>
+                <button onclick="setScore(14, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q15">
+            <div class="question">¿Tenés material profesional y actualizable para mostrar el proyecto sin depender de renders pesados, PDFs o carpetas sueltas?</div>
+            <div class="button-group">
+                <button onclick="setScore(15, 1)">Sí</button>
+                <button onclick="setScore(15, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q16">
+            <div class="question">¿Estás midiendo el rendimiento de tu contenido para mejorar tus anuncios, piezas gráficas y acciones comerciales?</div>
+            <div class="button-group">
+                <button onclick="setScore(16, 1)">Sí</button>
+                <button onclick="setScore(16, 0)">No</button>
+            </div>
+        </div>
+        <div class="section-title">📞 Atención al cliente y experiencia del comprador</div>
+        <div class="question-block" data-points="0" id="q17">
+            <div class="question">¿El comprador puede navegar el proyecto sin moverse de su casa?</div>
+            <div class="button-group">
+                <button onclick="setScore(17, 1)">Sí</button>
+                <button onclick="setScore(17, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q18">
+            <div class="question">¿Puede acceder a toda la información que necesita sin hablar con un asesor?</div>
+            <div class="button-group">
+                <button onclick="setScore(18, 1)">Sí</button>
+                <button onclick="setScore(18, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q19">
+            <div class="question">¿La experiencia digital que brindás genera confianza y reduce dudas?</div>
+            <div class="button-group">
+                <button onclick="setScore(19, 1)">Sí</button>
+                <button onclick="setScore(19, 0)">No</button>
+            </div>
+        </div>
+        <div class="section-title">🛠 Logística y operaciones</div>
+        <div class="question-block" data-points="0" id="q20">
+            <div class="question">¿Tu equipo evita errores como doble reserva de un lote?</div>
+            <div class="button-group">
+                <button onclick="setScore(20, 1)">Sí</button>
+                <button onclick="setScore(20, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q21">
+            <div class="question">¿Los asesores pueden usar el mapa para ubicar fácilmente zonas verdes, amenities o servicios?</div>
+            <div class="button-group">
+                <button onclick="setScore(21, 1)">Sí</button>
+                <button onclick="setScore(21, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q22">
+            <div class="question">¿Reducís tiempo y dinero en visitas físicas innecesarias?</div>
+            <div class="button-group">
+                <button onclick="setScore(22, 1)">Sí</button>
+                <button onclick="setScore(22, 0)">No</button>
+            </div>
+        </div>
+        <div class="section-title">🧠 Estrategia y planificación</div>
+        <div class="question-block" data-points="0" id="q23">
+            <div class="question">¿Usás reportes de comportamiento de los usuarios para definir estrategias comerciales?</div>
+            <div class="button-group">
+                <button onclick="setScore(23, 1)">Sí</button>
+                <button onclick="setScore(23, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q24">
+            <div class="question">¿Contás con un sistema que te permita evaluar la performance de cada proyecto?</div>
+            <div class="button-group">
+                <button onclick="setScore(24, 1)">Sí</button>
+                <button onclick="setScore(24, 0)">No</button>
+            </div>
+        </div>
+        
+        <div class="question-block" data-points="0" id="q25">
+            <div class="question">¿Podés visualizar la evolución de la comercialización en reuniones internas o con inversores?</div>
+            <div class="button-group">
+                <button onclick="setScore(25, 1)">Sí</button>
+                <button onclick="setScore(25, 0)">No</button>
+            </div>
+        </div>
+        
+<button onclick="calculateScore()" style="margin-top:20px; padding:10px 20px; background:#2e7d32; color:white; border:none;">Calcular Puntaje</button>
+<div id="score"></div>
+
+<script>
+    const questionCount = 26;
+    const scores = Array(questionCount).fill(0);
+
+    function setScore(index, value) {
+        scores[index] = value;
+        const block = document.getElementById("q" + index);
+        block.style.background = value ? "#e0f7fa" : "#ffebee";
+    }
+
+    function calculateScore() {
+        let total = scores.reduce((a, b) => a + b, 0);
+        let resultText = "";
+        if (total <= 6) {
+            resultText = "🚨 Tu proyecto está operando con herramientas del siglo pasado. ¡Hay muchas oportunidades de mejora!";
+        } else if (total <= 12) {
+            resultText = "🛠 Estás en camino, pero aún podés mejorar ventas, eficiencia y experiencia del cliente.";
+        } else {
+            resultText = "🚀 ¡Excelente! Estás muy cerca de operar como un proyecto del siglo XXI. ¿Ya estás usando Búho MAP?";
+        }
+        document.getElementById("score").style.display = "block";
+        
+        let contactButton = '<br><br><a href="https://buhomap.com.ar/contacto" target="_blank" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#007bff;color:white;text-decoration:none;border-radius:5px;">Contactanos y llevá tu proyecto al siguiente nivel</a>';
+        document.getElementById("score").innerHTML = "<b>Puntaje total: " + total + "</b><br>" + resultText + contactButton;
+    
+    }
+</script>
